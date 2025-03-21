@@ -1,0 +1,225 @@
+/* Общие стили */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+.section {
+    padding: 80px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.section:nth-child(even) .section-image {
+    order: -1;
+}
+
+.section-content {
+    padding: 20px;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: #3498db;
+}
+
+.section-text {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.section-image {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.section-image:hover {
+    transform: translateY(-5px);
+}
+
+.section-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+
+/* Адаптивность */
+
+@media (max-width: 768px) {
+    .section {
+        grid-template-columns: 1fr;
+        padding: 50px 20px;
+    }
+    .section:nth-child(even) .section-image {
+        order: 0;
+    }
+    .section-title {
+        font-size: 2rem;
+    }
+}
+
+
+/* Стили шапки */
+
+.header {
+    position: relative;
+    padding: 80px 20px 30px;
+    background: #f8f9fa;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+
+/* Логотип */
+
+.logo {
+    position: absolute;
+    left: 50px;
+    top: 30px;
+    width: 150px;
+    height: 150px;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+.logo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+/* Название сайта */
+
+.site-title {
+    text-align: center;
+    margin: 0 auto 25px;
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    color: #2d3436;
+    letter-spacing: 1.5px;
+}
+
+
+/* Навигационное меню */
+html {
+    scroll-behavior: smooth;
+  }
+
+html {
+    scroll-behavior: smooth;
+  }
+
+.main-nav {
+    text-align: center;
+}
+
+.nav-list {
+    display: inline-flex;
+    gap: 40px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav-link {
+    position: relative;
+    text-decoration: none;
+    color: #636e72;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1rem;
+    padding: 8px 0;
+    transition: color 0.3s ease;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #0984e3;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #2d3436;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.nav-link.active {
+    color: #0984e3;
+    font-weight: 500;
+}
+
+
+/* Стили для подвала */
+
+.footer {
+    background: #2c3e50;
+    padding: 20px 10px;
+    text-align: center;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.social-icon {
+    width: 25px;
+    height: 25px;
+    fill: #ecf0f1;
+    transition: all 0.3s ease;
+}
+
+
+/*
+.social-link:hover .social-icon {
+    fill: #3498db;
+    transform: translateY(-3px);
+}
+*/
+
+
+/* Адаптивность */
+
+@media (max-width: 480px) {
+    .social-links {
+        gap: 20px;
+    }
+    .social-icon {
+        width: 35px;
+        height: 35px;
+    }
+}
