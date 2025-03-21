@@ -126,6 +126,13 @@ body {
 
 
 /* Навигационное меню */
+html {
+    scroll-behavior: smooth;
+  }
+
+html {
+    scroll-behavior: smooth;
+  }
 
 .main-nav {
     text-align: center;
